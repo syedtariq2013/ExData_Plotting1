@@ -4,7 +4,7 @@ plot3 <- function() {
   # and create a data frame
   #----------------------------------------------------------------------------
   require("sqldf")
-  setwd("/home/syed/exploratorydataanalysis/ExData_Plotting1")
+  #setwd("/home/syed/exploratorydataanalysis/ExData_Plotting1")
   mySql <- "SELECT * from file WHERE Date = '1/2/2007' OR Date = '2/2/2007'"
   myFile <- "../household_power_consumption.txt"
   dfData <- read.csv2.sql(myFile,mySql)
