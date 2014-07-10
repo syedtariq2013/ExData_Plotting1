@@ -44,12 +44,12 @@ plot4 <- function() {
   # convert to Posix
   vDateTime <- strptime(vDateTime,format="%d/%m/%Y %T")
   # create new data frame
-  dfNewData <- data.frame(vDateTime,dfData[[3]],dfData[[4]],dfData[[5]],
+  dfNewData <<- data.frame(vDateTime,dfData[[3]],dfData[[4]],dfData[[5]],
                           dfData[[6]],dfData[[7]],dfData[[8]],dfData[[9]])
   # create column name vector for dfData. Leave out the Date and Time labels
-  col4DfNewData <-c("DateTime",colnames(dfData)[3:9])
+  col4DfNewData <<-c("DateTime",colnames(dfData)[3:9])
   # rename the column names of dfNewData
-  colnames(dfNewData) <- col4DfNewData
+  colnames(dfNewData) <<- col4DfNewData
   #----------------------------------------------------------------------------
   # Next, plot the data. Override: main,xlab and col
   #---------------------------------------------------------------------------- 
